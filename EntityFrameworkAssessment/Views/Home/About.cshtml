@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Order ID
+        </th>
+        <th>
+            Customer ID
+        </th>
+        <th>
+            Employee ID
+        </th>
+    </tr>
+
+    @foreach (var Element in ViewBag.OrdersID)
+    {
+        <tr>
+            <td>
+                @Element.OrderID
+            </td>
+          
+        </tr>
+
+    }
+    @foreach (var Element in ViewBag.CustomersTable)
+    {
+        <tr>
+            <td>
+                @Element.CustomerID
+            </td>
+        </tr>
+    }
+    @foreach (var Element in ViewBag.EmployeesTable)
+    {
+        <tr>
+            <td>
+                @Element.EmployeeID
+            </td>
+        </tr>
+    }
+
+</table>
